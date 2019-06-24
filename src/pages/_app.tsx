@@ -1,6 +1,7 @@
 import { Container, default as NextApp } from 'next/app'
 import Head from 'next/head'
 import React, { Fragment } from 'react'
+import faviconImage from '~/assets/favicon.png'
 import { dom as fontawesome } from '~/plugins/fontawesome'
 import { ThemeProvider } from '~/styled'
 import GlobalStyle from '~/styled/global'
@@ -25,6 +26,7 @@ class App extends NextApp<any> {
         <Head>
           <title>Amathon 2019 | Cloud to Infinity</title>
           <style>{fontawesome.css()}</style>
+          <link rel='shortcut icon' href={faviconImage} />
         </Head>
         <ThemeProvider theme={base}>
           <Fragment>

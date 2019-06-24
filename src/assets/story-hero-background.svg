@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="768px" viewBox="0 0 1024 768" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1024" height="768"></rect>
+        <linearGradient x1="66.5001438%" y1="49.7604837%" x2="18.0303647%" y2="51.9455983%" id="linearGradient-3">
+            <stop stop-color="#FFB52D" offset="0%"></stop>
+            <stop stop-color="#FD7E14" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use xlink:href="#path-1"></use>
+                <path d="M-166,434.916095 C-3.14015033,216.774 202.787686,128.457819 451.783509,169.967553 C700.779331,211.477287 898.524482,137.154769 1045.01896,-53 L1476,131.324622 C1280.12522,361.149921 1091.87711,486.796718 911.255678,508.265013 C640.323524,540.467456 573.222897,400.965242 310.488281,315.086159 C135.331871,257.833437 -23.4975561,315.346063 -166,487.624035 L-166,434.916095 Z" fill="url(#linearGradient-3)" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

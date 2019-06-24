@@ -1,38 +1,80 @@
+import { useEffect, useState } from 'react'
 import LogoImage from '~/assets/top-logo.svg'
 import NavAmathonImage from '~/assets/top-nav-amathon.svg'
 import NavAusgImage from '~/assets/top-nav-ausg.svg'
 import NavAwskrugImage from '~/assets/top-nav-awskrug.svg'
-import styled, { css } from '~/styled'
+import styled, { css, media } from '~/styled'
 import Button from './Button'
+import Section from './Section'
 
 export default function Top() {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  const onScroll = () => {
+    if (window.scrollY < 10) {
+      setIsScrolled(false)
+
+    } else if (!isScrolled) {
+      setIsScrolled(true)
+
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll)
+
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+    }
+  }, [])
+
   return (
-    <TopContainer>
-      <Logo src={LogoImage} />
-      <Space />
-      <Nav>
-        <NavItemContainer isActivated>
-          <NavAmathon src={NavAmathonImage} />
-        </NavItemContainer>
-        <NavItemContainer>
-          <NavAwskrug src={NavAwskrugImage} />
-        </NavItemContainer>
-        <NavItemContainer>
-          <NavAusg src={NavAusgImage} />
-        </NavItemContainer>
-      </Nav>
-      <Button
-        icon={['fas', 'rocket']}
-        label='참가 신청하기'
-      />
-    </TopContainer>
+    <Fixed isScrolled={isScrolled}>
+      <Section padding={isScrolled ? '.75rem 1rem' : '1.5rem'}>
+        <Container>
+          <Logo src={LogoImage} />
+          <Space />
+          <Nav>
+            <NavItemContainer isActivated>
+              <NavAmathon src={NavAmathonImage} />
+            </NavItemContainer>
+            <NavItemContainer>
+              <NavAwskrug src={NavAwskrugImage} />
+            </NavItemContainer>
+            <NavItemContainer>
+              <NavAusg src={NavAusgImage} />
+            </NavItemContainer>
+          </Nav>
+          <Button
+            icon={['fas', 'rocket']}
+            label='참가 신청하기'
+          />
+        </Container>
+      </Section>
+    </Fixed>
   )
 }
 
-const TopContainer = styled.div`
+interface IFixedProps {
+  isScrolled?: boolean
+}
+const Fixed = styled.div<IFixedProps>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color .3s, box-shadow .3s;
+
+  ${(props) => props.isScrolled && css`
+    background-color: #212529;
+    box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, .25);
+  `}
+`
+
+const Container = styled.div`
   align-items: center;
   display: flex;
-  padding: 1.5625rem;
 `
 
 const Logo = styled.img`
@@ -49,6 +91,10 @@ const Space = styled.div`
 const Nav = styled.div`
   display: flex;
   margin-right: .5rem;
+
+  ${media.lessThan('medium')`
+    display: none;
+  `}
 `
 
 interface INavItemContainerProps {

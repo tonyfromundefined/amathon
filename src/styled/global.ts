@@ -17,4 +17,9 @@ export default createGlobalStyle`
     padding: 0;
     margin: 0;
   }
+
+  ::selection {
+    color: #fff;
+    background: #12b886;
+  }
 `
