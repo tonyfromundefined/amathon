@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import styled, { media } from '~/styled'
 import Button from '../Button'
 import Section from '../Section'
@@ -9,45 +9,56 @@ const MINUTE = 60 * SECOND
 const HOUR = 60 * MINUTE
 const DAY = 24 * HOUR
 
+const END_DATE = new Date('2019-08-16T24:00:00').getTime()
+
 let frameId: any
 
-export default function StoryDetail() {
-  const remainTimes = new Date('2019-08-16T24:00:00').getTime() - new Date().getTime()
+function calculateCount() {
+  const remainTimes = END_DATE - new Date().getTime()
 
-  const calculatedDay = Math.floor(remainTimes / DAY)
-  const calculatedHour = Math.floor(remainTimes % DAY / HOUR)
-  const calculatedMinute = Math.floor(remainTimes % HOUR / MINUTE)
-  const calculatedSecond = Math.floor(remainTimes % MINUTE / SECOND)
+  return {
+    day: Math.floor(remainTimes / DAY),
+    hour: Math.floor(remainTimes % DAY / HOUR),
+    minute: Math.floor(remainTimes % HOUR / MINUTE),
+    second: Math.floor(remainTimes % MINUTE / SECOND),
+  }
+}
+
+export default function StoryDetail() {
+  const {
+    day: calculatedDay,
+    hour: calculatedHour,
+    minute: calculatedMinute,
+    second: calculatedSecond,
+  } = calculateCount()
 
   const [day, setDay] = useState(calculatedDay)
   const [hour, setHour] = useState(calculatedHour)
   const [minute, setMinute] = useState(calculatedMinute)
   const [second, setSecond] = useState(calculatedSecond)
 
-  const update = () => {
+  const awaitRequestFrameAndUpdateCount = useCallback(() => {
     frameId = requestAnimationFrame(() => {
-      const remainTimes = new Date('2019-08-16T24:00:00').getTime() - new Date().getTime()
-
-      const calculatedDay = Math.floor(remainTimes / DAY)
-      const calculatedHour = Math.floor(remainTimes % DAY / HOUR)
-      const calculatedMinute = Math.floor(remainTimes % HOUR / MINUTE)
-      const calculatedSecond = Math.floor(remainTimes % MINUTE / SECOND)
+      const {
+        day: calculatedDay,
+        hour: calculatedHour,
+        minute: calculatedMinute,
+        second: calculatedSecond,
+      } = calculateCount()
 
       setDay(calculatedDay)
       setHour(calculatedHour)
       setMinute(calculatedMinute)
       setSecond(calculatedSecond)
 
-      return update()
+      return awaitRequestFrameAndUpdateCount()
     })
-  }
+  }, [])
 
   useEffect(() => {
-    update()
+    awaitRequestFrameAndUpdateCount()
 
-    return () => {
-      window.cancelAnimationFrame(frameId)
-    }
+    return () => window.cancelAnimationFrame(frameId)
   }, [])
 
   const isDayOmitted = day <= 0
