@@ -164,9 +164,10 @@ const ScheduleItemTime = styled.div`
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, .5);
-  padding: 0 .25rem 0 .75rem;
+  padding: 0 0 0 .75rem;
   font-size: .75rem;
   font-style: italic;
+  width: 2.75rem;
 `
 
 interface IScheduleItemIconProps {
