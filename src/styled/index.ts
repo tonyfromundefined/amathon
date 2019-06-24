@@ -1,5 +1,7 @@
 import * as styledComponents from 'styled-components'
 import { ThemedStyledComponentsModule } from 'styled-components'
+import media from 'styled-media-query'
+import { Theme } from './themes/base'
 
 const {
   default: styled,
@@ -7,7 +9,7 @@ const {
   createGlobalStyle,
   keyframes,
   ThemeProvider,
-} = styledComponents as ThemedStyledComponentsModule<{}>
+} = styledComponents as ThemedStyledComponentsModule<Theme>
 
-export { css, createGlobalStyle, keyframes, ThemeProvider }
+export { css, createGlobalStyle, keyframes, ThemeProvider, media }
 export default styled

@@ -141,9 +141,9 @@ const AnchorElement = styled.a<IAnchorElementProps>`
   `}
 
   ${(props) => (props.isDisabled || props.isLoading) && css`
-    background: ${(props) => props.theme.gray[2]};
+    background: ${(props) => props.theme.gray[8]};
     cursor: not-allowed;
-    color: ${(props) => props.theme.gray[5]};
+    color: ${(props) => props.theme.gray[6]};
     box-shadow: none;
   `}
 

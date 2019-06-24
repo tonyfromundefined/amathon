@@ -1,7 +1,7 @@
-import LogoImage from '~/assets/top-logo.svg?inline'
-import NavAmathonImage from '~/assets/top-nav-amathon.svg?inline'
-import NavAusgImage from '~/assets/top-nav-ausg.svg?inline'
-import NavAwskrugImage from '~/assets/top-nav-awskrug.svg?inline'
+import LogoImage from '~/assets/top-logo.svg'
+import NavAmathonImage from '~/assets/top-nav-amathon.svg'
+import NavAusgImage from '~/assets/top-nav-ausg.svg'
+import NavAwskrugImage from '~/assets/top-nav-awskrug.svg'
 import styled, { css } from '~/styled'
 import Button from './Button'
 
