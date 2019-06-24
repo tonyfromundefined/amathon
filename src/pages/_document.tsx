@@ -10,10 +10,8 @@ export default class extends Document {
       enhanceApp: (App: any) => (props: any) => sheet.collectStyles(<App {...props} />),
     })
 
-    const initialProps = await Document.getInitialProps(context)
-
     return {
-      ...initialProps,
+      ...await Document.getInitialProps(context),
       styles: sheet.getStyleElement(),
     }
   }
