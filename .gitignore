@@ -4,3 +4,5 @@ yarn.error
 .DS_Store
 dist
 .npmrc
+
+src/out
