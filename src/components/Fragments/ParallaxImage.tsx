@@ -9,7 +9,7 @@ export default function ParallaxImage(props: IParallaxImageProps) {
       bgImage={props.image}
       strength={500}
     >
-      <div style={{ height: '80vh' }} />
+      <div style={{ height: '85vh' }} />
     </Parallax>
   )
 }

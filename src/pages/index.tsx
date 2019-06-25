@@ -1,8 +1,8 @@
+import AmathonLandscapeImage from '~/assets/amathon-landscape.jpg'
 import AusgImage1 from '~/assets/ausg-1.jpg'
 import AusgImage2 from '~/assets/ausg-2.jpg'
 import AwskrugImage1 from '~/assets/awskrug-1.jpg'
 import AwskrugImage2 from '~/assets/awskrug-2.jpg'
-import ParallaxSampleImage from '~/assets/parallax-sample.jpg'
 import FloatingButton from '~/components/Fragments/FloatingButton'
 import ParallaxImage from '~/components/Fragments/ParallaxImage'
 import Top from '~/components/Fragments/Top'
@@ -23,7 +23,7 @@ export default function PageIndex() {
       <Top />
       <StoryHero />
       <div id='amathon'>
-        <ParallaxImage image={ParallaxSampleImage} />
+        <ParallaxImage image={AmathonLandscapeImage} />
         <StoreCore />
         <StoryDetail />
         <StoryPresession />

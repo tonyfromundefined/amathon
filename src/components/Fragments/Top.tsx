@@ -143,7 +143,7 @@ const NavAmathon = styled.img`
 `
 
 const NavAwskrug = styled.img`
-  width: 3.75rem;
+  width: 4.125rem;
   height: .6875rem;
 `
 
