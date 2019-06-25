@@ -1,9 +1,9 @@
 import Fade from 'react-reveal/Fade'
 import LogoImage from '~/assets/story-presession-logo.svg'
 import styled, { media } from '~/styled'
-import Button from '../Button'
-import Section from '../Section'
-import Title, { TitleCaption } from '../Title'
+import Button from '../System/Button'
+import Section from '../System/Section'
+import Title, { TitleCaption } from '../System/Title'
 import { Column, Columns } from './Detail'
 
 export default function StoryPresession() {

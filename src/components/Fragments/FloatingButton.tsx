@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from 'react'
 import styled, { css, keyframes, media } from '~/styled'
 
-export default function FloatingRegistrationButton() {
+export default function FloatingButton() {
   const [isScrolled, setIsScrolled] = useState(false)
 
   const onScroll = () => {

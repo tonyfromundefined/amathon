@@ -1,11 +1,13 @@
 import Fade from 'react-reveal/Fade'
 import AmathonLogoImage from '~/assets/story-about-amathon-logo.svg'
 import styled from '~/styled'
-import Section from '../Section'
+import Section from '../System/Section'
 
 export default function StoryCore() {
   return (
-    <Section background='radial-gradient(circle at bottom, #2D343B, #2A2D2F)'>
+    <Section
+      background='radial-gradient(circle at bottom, #2D343B, #2A2D2F)'
+    >
       <AmathonLogoContainer>
         <Fade bottom distance='1rem'>
           <AmathonLogo src={AmathonLogoImage} />

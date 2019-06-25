@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from 'react'
 import styled, { media } from '~/styled'
-import Button from '../Button'
-import Section from '../Section'
-import Title, { TitleCaption } from '../Title'
+import Button from '../System/Button'
+import Section from '../System/Section'
+import Title, { TitleCaption } from '../System/Title'
 
 const SECOND = 1000
 const MINUTE = 60 * SECOND

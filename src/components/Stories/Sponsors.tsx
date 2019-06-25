@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import Fade from 'react-reveal/Fade'
 import MegazoneImage from '~/assets/story-sponsors-megazone.png'
 import styled, { css, media } from '~/styled'
-import Button from '../Button'
-import Section from '../Section'
+import Button from '../System/Button'
+import Section from '../System/Section'
 import { Column, Columns } from './Detail'
 
 type RewardType =
@@ -25,56 +26,76 @@ export default function StorySponsors() {
       <Container>
         <Columns>
           <Column>
-            <Title>후원사</Title>
-            <SponsorType dotBackground='linear-gradient(to bottom, #C6CCD2, #9BA3AD)'>
-              Platinum
-            </SponsorType>
-            <Sponsors>
-              <BigSponsor src={MegazoneImage} />
-            </Sponsors>
-            <SponsorType dotBackground='linear-gradient(to bottom, #F59F00, #C78100)'>
-              Gold
-            </SponsorType>
-            <Sponsors>
-              <SmallSponsor src={MegazoneImage} />
-              <SmallSponsor src={MegazoneImage} />
-              <SmallSponsor src={MegazoneImage} />
-            </Sponsors>
+            <Fade bottom distance='1rem'>
+              <Title>후원사</Title>
+            </Fade>
+            <SponsorContainer>
+              <SponsorType dotBackground='linear-gradient(to bottom, #C6CCD2, #9BA3AD)'>
+                Platinum
+              </SponsorType>
+              <Fade bottom distance='1rem'>
+                <Sponsors>
+                  <BigSponsor src={MegazoneImage} />
+                </Sponsors>
+              </Fade>
+            </SponsorContainer>
+            <SponsorContainer>
+              <SponsorType dotBackground='linear-gradient(to bottom, #F59F00, #C78100)'>
+                Gold
+              </SponsorType>
+              <Fade bottom distance='1rem'>
+                <Sponsors>
+                  <SmallSponsor src={MegazoneImage} />
+                  <SmallSponsor src={MegazoneImage} />
+                  <SmallSponsor src={MegazoneImage} />
+                </Sponsors>
+              </Fade>
+            </SponsorContainer>
           </Column>
           <Column>
-            <Title>후원사 혜택</Title>
-            <RewardTitles>
-              <RewardTitle
-                isActivated={activeRewardType === 'platinum'}
-                onClick={onPlatinumClick}
-              >
-                Platinum
-              </RewardTitle>
-              <RewardTitle
-                isActivated={activeRewardType === 'gold'}
-                onClick={onGoldClick}
-              >
-                Gold
-              </RewardTitle>
-            </RewardTitles>
+            <Fade bottom distance='1rem'>
+              <Title>후원사 혜택</Title>
+            </Fade>
+            <Fade bottom distance='1rem'>
+              <RewardTitles>
+                  <RewardTitle
+                    isActivated={activeRewardType === 'platinum'}
+                    onClick={onPlatinumClick}
+                  >
+                    Platinum
+                  </RewardTitle>
+                  <RewardTitle
+                    isActivated={activeRewardType === 'gold'}
+                    onClick={onGoldClick}
+                  >
+                    Gold
+                  </RewardTitle>
+              </RewardTitles>
+            </Fade>
             {activeRewardType === 'platinum' &&
-              <Rewards>
-                개별 홍보 시간, 행사 내 부스<br />
-                해커톤 주제 및 취업 연계 트랙 운영<br />
-                현수막 로고, X Banner 로고, 홈페이지 로고 노출
-              </Rewards>
+              <Fade bottom distance='1rem'>
+                <Rewards>
+                  개별 홍보 시간, 행사 내 부스<br />
+                  해커톤 주제 및 취업 연계 트랙 운영<br />
+                  현수막 로고, X Banner 로고, 홈페이지 로고 노출
+                </Rewards>
+              </Fade>
             }
             {activeRewardType === 'gold' &&
-              <Rewards>
-                개별 홍보 시간<br />
-                현수막 로고, X Banner 로고, 홈페이지 로고 노출
-              </Rewards>
+              <Fade bottom distance='1rem'>
+                <Rewards>
+                  개별 홍보 시간<br />
+                  현수막 로고, X Banner 로고, 홈페이지 로고 노출
+                </Rewards>
+              </Fade>
             }
-            <Button
-              background='#1C7ED6'
-              icon={['fas', 'rocket']}
-              label='Amathon 후원사로 참여하기'
-            />
+            <Fade bottom distance='1rem'>
+              <Button
+                background='#1C7ED6'
+                icon={['fas', 'rocket']}
+                label='Amathon 후원사로 참여하기'
+              />
+            </Fade>
           </Column>
         </Columns>
       </Container>
@@ -94,6 +115,14 @@ const Title = styled.h3`
   color: #fff;
   font-weight: 700;
   margin-bottom: 1.5rem;
+`
+
+const SponsorContainer = styled.div`
+  margin-bottom: 3rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 `
 
 interface ISponsorTypeProps {
@@ -120,13 +149,7 @@ const SponsorType = styled.div<ISponsorTypeProps>`
   }
 `
 
-const Sponsors = styled.div`
-  margin-bottom: 3rem;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-`
+const Sponsors = styled.div``
 
 const BigSponsor = styled.img`
   height: 4.375rem;

@@ -1,7 +1,7 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled, { css } from '~/styled'
-import Section from '../Section'
+import Section from '../System/Section'
 import { Column, Columns } from './Detail'
 
 export default function StorySchedule() {

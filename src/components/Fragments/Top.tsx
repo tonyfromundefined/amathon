@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+import Scrollspy from 'react-scrollspy'
 import LogoImage from '~/assets/top-logo.svg'
 import NavAmathonImage from '~/assets/top-nav-amathon.svg'
 import NavAusgImage from '~/assets/top-nav-ausg.svg'
 import NavAwskrugImage from '~/assets/top-nav-awskrug.svg'
 import styled, { css, media } from '~/styled'
-import Button from './Button'
-import Section from './Section'
+import Button from '../System/Button'
+import Section from '../System/Section'
 
 export default function Top() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -32,18 +34,31 @@ export default function Top() {
     <Fixed isScrolled={isScrolled}>
       <Section padding={isScrolled ? '.75rem 1rem' : '1.5rem'}>
         <Container>
-          <Logo src={LogoImage} />
+          <AnchorLink href='#hero'>
+            <Logo src={LogoImage} />
+          </AnchorLink>
           <Space />
           <Nav>
-            <NavItemContainer isActivated>
-              <NavAmathon src={NavAmathonImage} />
-            </NavItemContainer>
-            <NavItemContainer>
-              <NavAwskrug src={NavAwskrugImage} />
-            </NavItemContainer>
-            <NavItemContainer>
-              <NavAusg src={NavAusgImage} />
-            </NavItemContainer>
+            <Scrollspy
+              items={['amathon', 'awskrug', 'ausg']}
+              currentClassName='is-current'
+            >
+              <AnchorLink href='#amathon' offset='56'>
+                <NavItemContainer>
+                  <NavAmathon src={NavAmathonImage} />
+                </NavItemContainer>
+              </AnchorLink>
+              <AnchorLink href='#awskrug' offset='56'>
+                <NavItemContainer>
+                  <NavAwskrug src={NavAwskrugImage} />
+                </NavItemContainer>
+              </AnchorLink>
+              <AnchorLink href='#ausg' offset='56'>
+                <NavItemContainer>
+                  <NavAusg src={NavAusgImage} />
+                </NavItemContainer>
+              </AnchorLink>
+            </Scrollspy>
           </Nav>
           <Button
             icon={['fas', 'rocket']}
@@ -68,7 +83,7 @@ const Fixed = styled.div<IFixedProps>`
 
   ${(props) => props.isScrolled && css`
     background-color: #212529;
-    box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, .25);
+    box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, .1);
   `}
 `
 
@@ -80,7 +95,6 @@ const Container = styled.div`
 const Logo = styled.img`
   width: 9rem;
   height: 1.6875rem;
-  margin-top: -.0625rem;
   cursor: pointer;
 `
 
@@ -88,19 +102,7 @@ const Space = styled.div`
   flex: 1;
 `
 
-const Nav = styled.div`
-  display: flex;
-  margin-right: .5rem;
-
-  ${media.lessThan('medium')`
-    display: none;
-  `}
-`
-
-interface INavItemContainerProps {
-  isActivated?: boolean
-}
-const NavItemContainer = styled.a<INavItemContainerProps>`
+const NavItemContainer = styled.span`
   cursor: pointer;
   padding: .5rem;
   margin-right: .75rem;
@@ -111,14 +113,28 @@ const NavItemContainer = styled.a<INavItemContainerProps>`
   &:hover {
     opacity: .7;
   }
+`
 
-  ${(props) => props.isActivated && css`
-    opacity: 1;
+const Nav = styled.div`
+  display: flex;
+  margin-right: .5rem;
 
-    &:hover {
-      opacity: 1;
-    }
+  ${media.lessThan('medium')`
+    display: none;
   `}
+
+  ul {
+    margin: 0;
+
+    .is-current > ${NavItemContainer} {
+      opacity: 1;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
 `
 
 const NavAmathon = styled.img`

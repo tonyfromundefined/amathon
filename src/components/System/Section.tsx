@@ -4,10 +4,14 @@ interface ISectionProps {
   children: React.ReactNode
   background?: string
   padding?: string
+  id?: string
 }
 export default function Section(props: ISectionProps) {
   return (
-    <Container background={props.background}>
+    <Container
+      background={props.background}
+      id={props.id}
+    >
       <Centered padding={props.padding}>
         {props.children}
       </Centered>

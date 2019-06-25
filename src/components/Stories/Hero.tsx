@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Fade from 'react-reveal/Fade'
 import BackgroundImage from '~/assets/story-hero-background.svg'
 import styled, { keyframes, media } from '~/styled'
-import Button from '../Button'
+import Button from '../System/Button'
 
 export default function StoryHero() {
   const [height, setHeight] = useState(0)
@@ -13,7 +13,7 @@ export default function StoryHero() {
   }, [])
 
   return (
-    <Background height={height}>
+    <Background height={height} id='hero'>
       <HeroSection>
         <HeroSectionCentered>
           <Headers>
