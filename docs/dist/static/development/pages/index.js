@@ -18606,6 +18606,17 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./assets/amathon-landscape.jpg":
+/*!**************************************!*\
+  !*** ./assets/amathon-landscape.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/1c0f4b3dd30f2dab4377de01812c7241.jpg";
+
+/***/ }),
+
 /***/ "./assets/ausg-1.jpg":
 /*!***************************!*\
   !*** ./assets/ausg-1.jpg ***!
@@ -18647,17 +18658,6 @@ module.exports = "/_next/static/images/04f657a692d5243210c0c1c106890ba2.jpg";
 /***/ (function(module, exports) {
 
 module.exports = "/_next/static/images/675c28eaafd5bcd2fa5d456d7098baa1.jpg";
-
-/***/ }),
-
-/***/ "./assets/parallax-sample.jpg":
-/*!************************************!*\
-  !*** ./assets/parallax-sample.jpg ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/87ee65d3af43fdf2d5334e09148290fe.jpg";
 
 /***/ }),
 
@@ -19156,7 +19156,7 @@ var NavAmathon = _styled__WEBPACK_IMPORTED_MODULE_9__["default"].img.withConfig(
 })(["width:3.5625rem;height:.75rem;"]);
 var NavAwskrug = _styled__WEBPACK_IMPORTED_MODULE_9__["default"].img.withConfig({
   componentId: "sc-1hjt0xo-7"
-})(["width:3.75rem;height:.6875rem;"]);
+})(["width:4.125rem;height:.6875rem;"]);
 var NavAusg = _styled__WEBPACK_IMPORTED_MODULE_9__["default"].img.withConfig({
   componentId: "sc-1hjt0xo-8"
 })(["width:2.25rem;height:.6875rem;"]);
@@ -21447,16 +21447,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "../node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _assets_ausg_1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/ausg-1.jpg */ "./assets/ausg-1.jpg");
-/* harmony import */ var _assets_ausg_1_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_ausg_1_jpg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _assets_ausg_2_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/ausg-2.jpg */ "./assets/ausg-2.jpg");
-/* harmony import */ var _assets_ausg_2_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_ausg_2_jpg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _assets_awskrug_1_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/awskrug-1.jpg */ "./assets/awskrug-1.jpg");
-/* harmony import */ var _assets_awskrug_1_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_awskrug_1_jpg__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _assets_awskrug_2_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/awskrug-2.jpg */ "./assets/awskrug-2.jpg");
-/* harmony import */ var _assets_awskrug_2_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_awskrug_2_jpg__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _assets_parallax_sample_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../assets/parallax-sample.jpg */ "./assets/parallax-sample.jpg");
-/* harmony import */ var _assets_parallax_sample_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_assets_parallax_sample_jpg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _assets_amathon_landscape_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/amathon-landscape.jpg */ "./assets/amathon-landscape.jpg");
+/* harmony import */ var _assets_amathon_landscape_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_amathon_landscape_jpg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _assets_ausg_1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/ausg-1.jpg */ "./assets/ausg-1.jpg");
+/* harmony import */ var _assets_ausg_1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_ausg_1_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _assets_ausg_2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/ausg-2.jpg */ "./assets/ausg-2.jpg");
+/* harmony import */ var _assets_ausg_2_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_ausg_2_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_awskrug_1_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/awskrug-1.jpg */ "./assets/awskrug-1.jpg");
+/* harmony import */ var _assets_awskrug_1_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_awskrug_1_jpg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _assets_awskrug_2_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../assets/awskrug-2.jpg */ "./assets/awskrug-2.jpg");
+/* harmony import */ var _assets_awskrug_2_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_assets_awskrug_2_jpg__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _components_Fragments_FloatingButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Fragments/FloatingButton */ "./components/Fragments/FloatingButton.tsx");
 /* harmony import */ var _components_Fragments_ParallaxImage__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Fragments/ParallaxImage */ "./components/Fragments/ParallaxImage.tsx");
 /* harmony import */ var _components_Fragments_Top__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Fragments/Top */ "./components/Fragments/Top.tsx");
@@ -21529,7 +21529,7 @@ function PageIndex() {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Fragments_ParallaxImage__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    image: _assets_parallax_sample_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+    image: _assets_amathon_landscape_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
@@ -21566,14 +21566,14 @@ function PageIndex() {
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Fragments_ParallaxImage__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    image: _assets_awskrug_1_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    image: _assets_awskrug_1_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Fragments_ParallaxImage__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    image: _assets_awskrug_2_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    image: _assets_awskrug_2_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
@@ -21586,14 +21586,14 @@ function PageIndex() {
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Fragments_ParallaxImage__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    image: _assets_ausg_1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    image: _assets_ausg_1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Fragments_ParallaxImage__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    image: _assets_ausg_2_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    image: _assets_ausg_2_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
