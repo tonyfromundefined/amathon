@@ -1,4 +1,6 @@
 import FloatingRegistrationButton from '~/components/FloatingRegistrationButton'
+import StoryAusg from '~/components/Stories/Ausg'
+import StoryAwskrug from '~/components/Stories/Awskrug'
 import StoreCore from '~/components/Stories/Core'
 import StoryDetail from '~/components/Stories/Detail'
 import StoryHero from '~/components/Stories/Hero'
@@ -19,6 +21,8 @@ export default function PageIndex() {
       <StoryPresession />
       <StorySponsors />
       <StorySchedule />
+      <StoryAwskrug />
+      <StoryAusg />
     </Container>
   )
 }

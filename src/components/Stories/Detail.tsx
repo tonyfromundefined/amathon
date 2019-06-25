@@ -9,7 +9,7 @@ const MINUTE = 60 * SECOND
 const HOUR = 60 * MINUTE
 const DAY = 24 * HOUR
 
-const END_DATE = new Date('2019-08-16T24:00:00').getTime()
+const END_DATE = new Date('2019-08-16T15:00:00.000Z').getTime()
 
 let frameId: any
 

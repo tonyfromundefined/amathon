@@ -11,7 +11,7 @@ export default function Top() {
   const [isScrolled, setIsScrolled] = useState(false)
 
   const onScroll = () => {
-    if (window.scrollY < 10) {
+    if (window.scrollY < 150) {
       setIsScrolled(false)
 
     } else if (!isScrolled) {

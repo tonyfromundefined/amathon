@@ -6,7 +6,7 @@ export default function FloatingRegistrationButton() {
   const [isScrolled, setIsScrolled] = useState(false)
 
   const onScroll = () => {
-    if (window.scrollY < 200) {
+    if (window.scrollY < 150) {
       setIsScrolled(false)
 
     } else if (!isScrolled) {
@@ -66,13 +66,15 @@ const Button = styled.div<IButtonProps>`
   margin: 1.5rem 1.5rem 3rem;
   transition: border-radius .4s, margin .4s, transform .2s;
 
-  &:active {
-    transform: scale(.95);
-  }
-
   svg {
     margin-right: .3em;
   }
+
+  ${(props) => !props.isScrolled && css`
+    &:active {
+      transform: scale(.95);
+    }
+  `}
 
   ${(props) => props.isScrolled && css`
     margin: 0;

@@ -7,7 +7,7 @@ import { Column, Columns } from './Detail'
 export default function StorySchedule() {
   return (
     <Section background='radial-gradient(circle at bottom, #3A4B5C, #2A2E32)'>
-      <Title>스케쥴</Title>
+      <Title>행사 시간표</Title>
       <Columns>
         <Column>
           <Date>7월 20일 (토)</Date>
