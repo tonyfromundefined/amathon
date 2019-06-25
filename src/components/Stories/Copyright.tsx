@@ -35,6 +35,6 @@ const LabelContainer = styled.a`
 `
 
 const Label = styled.img`
-  width: 9.0625rem;
+  width: 16.3125rem;
   height: .9375rem;
 `
