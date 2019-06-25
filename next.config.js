@@ -6,6 +6,9 @@ module.exports = (
     withTypescript({
       distDir: '../dist',
       imagesName: '[hash].[ext]',
+      exportPathMap: async function(defaultPathMap) {
+        return defaultPathMap;
+      },
     })
   )
 )
