@@ -23,6 +23,7 @@
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.8.6",
+    "react-parallax": "^2.2.0",
     "react-reveal": "^1.2.2",
     "react-scrollspy": "^3.4.0",
     "styled-components": "^4.3.2",

@@ -14,10 +14,7 @@ import {
 
 export default function StoryAusg() {
   return (
-    <Section
-      background='radial-gradient(circle at bottom, #2D343B, #2A2D2F)'
-      id='ausg'
-    >
+    <Section id='ausg'>
       <Fade bottom distance='1rem'>
         <Title>AUSG</Title>
       </Fade>
