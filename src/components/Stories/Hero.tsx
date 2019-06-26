@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from 'react'
+import { Parallax } from 'react-parallax'
 import Fade from 'react-reveal/Fade'
 import BackgroundImage from '~/assets/story-hero-background.svg'
 import styled, { keyframes, media } from '~/styled'
@@ -13,36 +14,41 @@ export default function StoryHero() {
   }, [])
 
   return (
-    <Background height={height} id='hero'>
-      <HeroSection>
-        <HeroSectionCentered>
-          <Headers>
-            <Header>
-              <Fade bottom distance='1rem'>
-                {'2019년에도'}
-                {'Amathon은 계속됩니다'}
+    <Parallax
+      bgImage={BackgroundImage}
+      strength={200}
+    >
+      <Background height={height} id='hero'>
+        <HeroSection>
+          <HeroSectionCentered>
+            <Headers>
+              <Header>
+                <Fade bottom distance='1rem'>
+                  {'2019년에도'}
+                  {'Amathon은 계속됩니다'}
+                </Fade>
+              </Header>
+              <Subheader>
+                <Fade delay={250} bottom distance='1rem'>
+                  {'AWSKRUG가 만든 클라우드 Hackathon.'}
+                  {'새로운 사람들과 함께 떠올린 미래를'}
+                  {'나만의 클라우드 기술로 실현시키세요'}
+                </Fade>
+              </Subheader>
+              <Fade delay={500} bottom>
+                <Button
+                  icon={['fas', 'rocket']}
+                  label='참가 신청하기'
+                />
               </Fade>
-            </Header>
-            <Subheader>
-              <Fade delay={250} bottom distance='1rem'>
-                {'AWSKRUG가 만든 클라우드 Hackathon.'}
-                {'새로운 사람들과 함께 떠올린 미래를'}
-                {'나만의 클라우드 기술로 실현시키세요'}
-              </Fade>
-            </Subheader>
-            <Fade delay={500} bottom>
-              <Button
-                icon={['fas', 'rocket']}
-                label='참가 신청하기'
-              />
-            </Fade>
-          </Headers>
-        </HeroSectionCentered>
-      </HeroSection>
-      <Arrow>
-        <FontAwesomeIcon icon={['fal', 'angle-down']} />
-      </Arrow>
-    </Background>
+            </Headers>
+          </HeroSectionCentered>
+        </HeroSection>
+        <Arrow>
+          <FontAwesomeIcon icon={['fal', 'angle-down']} />
+        </Arrow>
+      </Background>
+    </Parallax>
   )
 }
 
@@ -50,9 +56,6 @@ interface IBackgroundProps {
   height: number
 }
 const Background = styled.div<IBackgroundProps>`
-  background: url(${BackgroundImage});
-  background-size: cover;
-  background-position: 50% 50%;
   height: ${(props) => props.height ? `${props.height}px` : '100vh'};
   min-height: 40rem;
   padding-top: 5.625rem;

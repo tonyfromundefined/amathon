@@ -1,4 +1,5 @@
-import AmathonLandscapeImage from '~/assets/amathon-landscape.jpg'
+import Amathon1Image from '~/assets/amathon-1.jpg'
+import Amathon2Image from '~/assets/amathon-2.jpg'
 import AusgImage1 from '~/assets/ausg-1.jpg'
 import AusgImage2 from '~/assets/ausg-2.jpg'
 import AwskrugImage1 from '~/assets/awskrug-1.jpg'
@@ -23,7 +24,8 @@ export default function PageIndex() {
       <Top />
       <StoryHero />
       <div id='amathon'>
-        <ParallaxImage image={AmathonLandscapeImage} />
+        <ParallaxImage image={Amathon2Image} />
+        <ParallaxImage image={Amathon1Image} />
         <StoreCore />
         <StoryDetail />
         <StoryPresession />
