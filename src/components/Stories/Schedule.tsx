@@ -22,26 +22,26 @@ export default function StorySchedule() {
           <ScheduleItem
             time='13:20'
             background='rgba(48, 56, 64, .9)'
-            title='AWS 개회사'
-            caption='AWS 전재민 이사'
+            title='개회사 1'
+            caption='김예본 대표'
           />
           <ScheduleItem
             time='13:30'
             background='rgba(48, 56, 64, .9)'
-            title='AWSKRUG 개회사'
-            caption='AWS 박상욱 리더'
+            title='개회사 2'
+            caption='남궁선 리더'
           />
           <ScheduleItem
             time='13:40'
             background='rgba(48, 56, 64, .9)'
-            title='AUSG 개회사 및 행사안내'
-            caption='AUSG 김예본 오거나이저'
+            title='개회사 3 및 행사안내'
+            caption='고명진 이사'
           />
           <ScheduleItem
             time='14:00'
             background='rgba(48, 56, 64, .9)'
-            title='AWS 및 Education 소개'
-            caption='AWS 강동완 매니저'
+            title='AWS 소개'
+            caption='고윤호 매니저'
           />
           <ScheduleItem
             background='rgba(0, 0, 0, .1)'
@@ -55,7 +55,7 @@ export default function StorySchedule() {
             time='16:00'
             background='rgba(48, 56, 64, .9)'
             title='후원사 세션'
-            caption='Megazone'
+            caption='Example'
           />
           <ScheduleItem
             background='rgba(0, 0, 0, .1)'

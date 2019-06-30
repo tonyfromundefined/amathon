@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Fade from 'react-reveal/Fade'
-import MegazoneImage from '~/assets/story-sponsors-megazone.png'
+import Example from '~/assets/story-sponsors-example.svg'
 import styled, { css, media } from '~/styled'
 import Button from '../System/Button'
 import Section from '../System/Section'
@@ -35,7 +35,7 @@ export default function StorySponsors() {
               </SponsorType>
               <Fade bottom distance='1rem'>
                 <Sponsors>
-                  <BigSponsor src={MegazoneImage} />
+                  <BigSponsor src={Example} />
                 </Sponsors>
               </Fade>
             </SponsorContainer>
@@ -45,9 +45,9 @@ export default function StorySponsors() {
               </SponsorType>
               <Fade bottom distance='1rem'>
                 <Sponsors>
-                  <SmallSponsor src={MegazoneImage} />
-                  <SmallSponsor src={MegazoneImage} />
-                  <SmallSponsor src={MegazoneImage} />
+                  <SmallSponsor src={Example} />
+                  <SmallSponsor src={Example} />
+                  <SmallSponsor src={Example} />
                 </Sponsors>
               </Fade>
             </SponsorContainer>
