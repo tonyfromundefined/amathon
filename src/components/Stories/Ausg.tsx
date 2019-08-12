@@ -44,7 +44,11 @@ export default function StoryAusg() {
       </Fade>
       <Fade bottom distance='1rem'>
         <SocialButtons>
-          <SocialButton background='#364FC7'>
+          <SocialButton
+            background='#364FC7'
+            href='https://www.facebook.com/ausgkr/'
+            target='_blank'
+          >
             <FontAwesomeIcon icon={['fab', 'facebook-f']} />
           </SocialButton>
         </SocialButtons>

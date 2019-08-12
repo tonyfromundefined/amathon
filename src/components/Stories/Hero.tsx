@@ -37,6 +37,7 @@ export default function StoryHero() {
               </Subheader>
               <Fade delay={500} bottom>
                 <Button
+                  href='https://forms.gle/SQWyoTfRBhULggRx8'
                   icon={['fas', 'rocket']}
                   label='참가 신청하기'
                 />

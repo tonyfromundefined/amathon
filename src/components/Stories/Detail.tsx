@@ -9,7 +9,7 @@ const MINUTE = 60 * SECOND
 const HOUR = 60 * MINUTE
 const DAY = 24 * HOUR
 
-const END_DATE = new Date('2019-08-16T15:00:00.000Z').getTime()
+const END_DATE = new Date('2019-08-23T23:59:59.000Z').getTime()
 
 let frameId: any
 
@@ -80,6 +80,7 @@ export default function StoryDetail() {
           }
         </CountdownCount>
         <Button
+          href='https://forms.gle/SQWyoTfRBhULggRx8'
           icon={['fas', 'rocket']}
           label='참가 신청하기'
           background='#D6336C'
@@ -97,25 +98,24 @@ export default function StoryDetail() {
             대학생/주니어 개발자 또는 디자이너
           </Title>
           <Title header='진행일자'>
-            7월 20일(금) ~ 7월 21일(토)
+            8월 31일(토) ~ 9월 1일(일)
           </Title>
           <Title header='참가비'>
             10,000원
           </Title>
           <Title header='장소'>
-            마루 180 B1 이벤트홀
+            AWS Korea 12F
           </Title>
         </Column>
         <Column>
           <Title header='신청기간'>
-            7월 4일(수) ~ 7월 14일(토)
+            8월 12일(월) ~ 8월 23일(금)
           </Title>
           <Title header='참가자 발표'>
-            7월 15일(일) 개별 안내
+            8월 24일(토) 개별 안내
           </Title>
           <Title header='참가자 혜택'>
-            AWS Credit & 굿즈<br />
-            100만원 상당의 상품<br />
+            AWS 굿즈<br />
             스타트업 리크루팅 기회<br />
             간식 무한 제공
           </Title>

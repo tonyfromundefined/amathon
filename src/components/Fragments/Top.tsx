@@ -63,6 +63,7 @@ export default function Top() {
           <Button
             icon={['fas', 'rocket']}
             label='참가 신청하기'
+            href='https://forms.gle/SQWyoTfRBhULggRx8'
           />
         </Container>
       </Section>

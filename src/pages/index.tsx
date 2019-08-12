@@ -29,8 +29,8 @@ export default function PageIndex() {
         <StoreCore />
         <StoryDetail />
         <StoryPresession />
-        <StorySponsors />
-        <StorySchedule />
+        {/* <StorySponsors /> */}
+        {/* <StorySchedule /> */}
       </div>
       <ParallaxImage image={AwskrugImage1} />
       <ParallaxImage image={AwskrugImage2} />

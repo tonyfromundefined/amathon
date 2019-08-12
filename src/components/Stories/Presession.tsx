@@ -5,6 +5,10 @@ import Button from '../System/Button'
 import Section from '../System/Section'
 import Title, { TitleCaption } from '../System/Title'
 import { Column, Columns } from './Detail'
+import AvatarImage1 from '~/assets/story-presession-avatar-1.jpg'
+import AvatarImage2 from '~/assets/story-presession-avatar-2.jpg'
+import AvatarImage3 from '~/assets/story-presession-avatar-3.jpg'
+import AvatarImage4 from '~/assets/story-presession-avatar-4.jpg'
 
 export default function StoryPresession() {
   return (
@@ -23,16 +27,17 @@ export default function StoryPresession() {
           background='#2F9E44'
           icon={['fas', 'rocket']}
           label='참가 신청하기'
+          href='https://forms.gle/SQWyoTfRBhULggRx8'
         />
       </LogoContainer>
       <Columns>
         <Column>
           <Titles>
             <Title header='주최'>
-              AWSKRUG<TitleCaption>AWS 한국 사용자 모임</TitleCaption>
+              AUSG<TitleCaption>AWSKRUG 대학생 모임</TitleCaption>
             </Title>
             <Title header='일정'>
-              7월 19일 (목)
+              8월 22일 (목)
             </Title>
             <Title header='시간'>
               19:00 ~ 21:00
@@ -41,31 +46,32 @@ export default function StoryPresession() {
               Amathon 지원자 전원
             </Title>
             <Title header='장소'>
-              GS타워 12층
+              강남구 논현로 508 GS타워 12층 (AWS)<br />
+              강남구 논현로85길 46, 2층 (메가존)
             </Title>
           </Titles>
         </Column>
         <Column>
           <Sessions>
             <Session>
-              <SessionAvatar />
-              <SessionTitle>Serverless Crawling & Data Analysis</SessionTitle>
-              <SessionName>Movilest CTO, 변규현</SessionName>
+              <SessionAvatar avatarUrl={AvatarImage1} />
+              <SessionTitle>Amplify로 풀사이클 개발 체험하기</SessionTitle>
+              <SessionName>AUSG 2기, 고명진</SessionName>
             </Session>
             <Session>
-              <SessionAvatar />
-              <SessionTitle>Serverless Framework으로 SPA 배포하기</SessionTitle>
+              <SessionAvatar avatarUrl={AvatarImage2} />
+              <SessionTitle>Serverless Framework으로 React 배포하기</SessionTitle>
               <SessionName>이리온컴퍼니 CTO, 원지혁</SessionName>
             </Session>
             <Session>
-              <SessionAvatar />
-              <SessionTitle>AWS를 사용해 Django 웹 서버 구축하기</SessionTitle>
-              <SessionName>AUSG, 김현중</SessionName>
+              <SessionAvatar avatarUrl={AvatarImage3} />
+              <SessionTitle>CircleCI + ElasticBeanstalk을 활용한 React 배포 자동화</SessionTitle>
+              <SessionName>AUSG 1기, 윤서현</SessionName>
             </Session>
             <Session>
-              <SessionAvatar />
-              <SessionTitle>SageMaker로 MNIST 머신러닝 맛보기</SessionTitle>
-              <SessionName>AUSG, 남궁선</SessionName>
+              <SessionAvatar avatarUrl={AvatarImage4} />
+              <SessionTitle>클라우드 컨테이너 환경에서 Back-end API 구성하기 AtoZ</SessionTitle>
+              <SessionName>AUSG 2기, 고윤호</SessionName>
             </Session>
           </Sessions>
         </Column>
@@ -136,7 +142,9 @@ interface ISessionAvatarProps {
 const SessionAvatar = styled.div<ISessionAvatarProps>`
   width: 3rem;
   height: 3rem;
-  background: ${(props) => props.avatarUrl ? `url(${props.avatarUrl})` : props.theme.gray[8]};
+  background-image: ${(props) => props.avatarUrl ? `url(${props.avatarUrl})` : props.theme.gray[8]};
+  background-size: cover;
+  background-position: 50% 50%;
   border-radius: 1.5rem;
   position: absolute;
   top: 0;
