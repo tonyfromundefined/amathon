@@ -10,7 +10,7 @@ export default function StorySchedule() {
       <Title>행사 시간표</Title>
       <Columns>
         <Column>
-          <Date>7월 20일 (토)</Date>
+          <Date>8월 31일 (토)</Date>
           <ScheduleItem
             time='13:00'
             background='rgba(0, 0, 0, .1)'
@@ -75,7 +75,7 @@ export default function StorySchedule() {
           />
         </Column>
         <Column>
-          <Date>7월 21일 (일)</Date>
+          <Date>9월 1일 (일)</Date>
           <ScheduleItem
             background='rgba(0, 0, 0, .1)'
             titleColor='rgba(255, 255, 255, .75)'

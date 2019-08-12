@@ -33,13 +33,25 @@ export default function StoryAwskrug() {
       </Fade>
       <Fade bottom distance='1rem'>
         <SocialButtons>
-          <SocialButton background='#364FC7'>
+          <SocialButton 
+            background='#364FC7'
+            href='https://www.facebook.com/groups/awskrug/'
+            target='_blank'
+          >
             <FontAwesomeIcon icon={['fab', 'facebook-f']} />
           </SocialButton>
-          <SocialButton background='#12B886'>
+          <SocialButton
+            background='#12B886'
+            href='http://slack.awskr.org/'
+            target='_blank'
+          >
             <FontAwesomeIcon icon={['fab', 'slack']} />
           </SocialButton>
-          <SocialButton background='#E64980'>
+          <SocialButton
+            background='#E64980'
+            href='https://www.meetup.com/awskrug/'
+            target='_blank'
+          >
             <FontAwesomeIcon icon={['fab', 'meetup']} />
           </SocialButton>
         </SocialButtons>
